@@ -26,5 +26,7 @@ set softtabstop=2
 set expandtab
 set noshiftround
 
+" Look and feel
 colorscheme slate
+:set guioptions-=T  "remove toolbar
 
