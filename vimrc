@@ -3,8 +3,8 @@
 " Turn on syntax highlighting
 syntax on
 
-" Show line numbers
-set number
+" Show line numbers (relative)
+set number relativenumber
 
 " Show file stats
 set ruler
@@ -26,6 +26,13 @@ set softtabstop=2
 set expandtab
 set noshiftround
 
+" Splits
+set splitbelow splitright
+
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " Key mapping
 map <C-n> :NERDTreeToggle<CR>
@@ -33,6 +40,7 @@ map <C-n> :NERDTreeToggle<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+let g:org_agenda_files = ['~/Dropbox/Documents/org/*.org']
 
 " Look and feel
 colorscheme slate
@@ -48,6 +56,9 @@ call plug#begin('~/.vim/plugged')
 " Plug 'junegunn/seoul256.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
+Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
+Plug 'fatih/vim-go'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
